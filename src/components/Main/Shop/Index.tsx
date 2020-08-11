@@ -1,30 +1,21 @@
 import React from 'react';
-import { View, Button, Dimensions } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { AntDesign } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import Header from './header';
 import Cart from './Cart/Cart';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import Search from './Search/Search';
 
 const Tab = createBottomTabNavigator();
-const windowWidth = Dimensions.get('window').width;
 
 const Index = ({ navigation }: { navigation: any }) => {
   return (
     <View style={{ flex: 1 }}>
-      <View
-        style={{
-          height: windowWidth / 6,
-          backgroundColor: '#f4511e',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Button title="Open" onPress={() => navigation.openDrawer()} />
-      </View>
+      <Header navigation={navigation} />
       <Tab.Navigator>
         <Tab.Screen
           name="Home"
@@ -74,5 +65,5 @@ const Index = ({ navigation }: { navigation: any }) => {
 export default Index;
 
 Index.propTypes = {
-  color: PropTypes.string,
+  color: PropTypes.objectOf(PropTypes.any),
 };

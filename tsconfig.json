@@ -1,12 +1,22 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": false,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "noEmit": true,
+    "sourceMap": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true
-  }
+  },
+  "filesGlob": [
+    "./src/images/appIcon/*.png",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "!./node_modules/**"
+],
 }
