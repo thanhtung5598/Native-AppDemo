@@ -8,13 +8,13 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Drawer = createDrawerNavigator();
 
-const Main = () => {
+const Main = (props: any) => {
   return (
     <Drawer.Navigator
       drawerStyle={{
         width: 200,
       }}
-      drawerContent={() => <Menu />}
+      drawerContent={() => <Menu {...props} />}
       initialRouteName="Shop"
     >
       <Drawer.Screen name="Shop" component={Shop} />
