@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, YellowBox } from 'react-native';
 import Authentication from './src/components/Authentication/Authentication';
 import ChangeInfo from './src/components/ChangeInfo/ChangeInfo';
 import Main from './src/components/Main/Main';
@@ -10,6 +10,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 StatusBar.setHidden(true);
+
+YellowBox.ignoreWarnings([
+  'VirtualizedLists should never be nested', // TODO: Remove when fixed
+]);
 
 const App = () => {
   return (

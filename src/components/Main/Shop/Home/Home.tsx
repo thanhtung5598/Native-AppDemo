@@ -1,14 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import Collection from './Collection';
 import Categories from './Categories';
+import TopProduct from './TopProduct';
 
 const Home = () => {
   return (
-    <View style={{ flex: 1, backgroundColor: '#DBDBDB' }}>
+    <ScrollView style={{ flex: 1, backgroundColor: '#DBDBDB' }}>
       <Collection />
       <Categories />
-    </View>
+      <TopProduct />
+    </ScrollView>
   );
 };
 
