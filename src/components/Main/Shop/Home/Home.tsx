@@ -1,10 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import Collection from './Collection';
+import Categories from './Categories';
 
 const Home = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home Component</Text>
+    <View style={{ flex: 1, backgroundColor: '#DBDBDB' }}>
+      <Collection />
+      <Categories />
     </View>
   );
 };

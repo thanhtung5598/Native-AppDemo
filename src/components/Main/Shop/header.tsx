@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  titleStyle: { color: '#FFF', fontFamily: 'Roboto', fontSize: 20},
+  titleStyle: { color: '#FFF', fontSize: 20},
   inputText_view_1: { height: height / 23, backgroundColor: '#FFF', paddingLeft: 10  },
   icon_style: { width: 25, height: 25 },
 });
